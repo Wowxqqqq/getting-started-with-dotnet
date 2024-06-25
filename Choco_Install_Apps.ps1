@@ -1,19 +1,34 @@
 # The following code provides the commands to install the relevant apps using chocotely via Powershell.
 
-# Install Visual Studio Community 2022
-choco install visualstudio2022community -y
+## Winget installations
 
-# Install Docker Desktop
-choco install docker-desktop -y
+# Install Winget if not already installed
+# https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/deployment/install-winget-windows-iot
 
-# Install Azure Data Studio
-choco install azure-data-studio -y
 
-# Install Git and Git Bash
-choco install git -y
+# Install apps using winget
+# Visual Studio Community 2022
+winget install --id=Microsoft.VisualStudio.Community -e
+## Install Docker Desktop
+winget install --id=Docker.DockerDesktop -e
 
-# Install Heroku CLI
+## Install Azure Data Studio
+winget install --id=Microsoft.AzureDataStudio -e
+
+## Install Postman
+winget install --id=Postman.Postman -e
+
+## Install Git
+winget install --id=Git.Git -e
+
+#--------------------------------------------
+## Choco utility installations
+
+# Install Choco if not already installed
+# https://chocolatey.org/install
+
+## Install Heroku CLI
 choco install heroku-cli -y
-
-# Install .NET Core CLI
-choco install dotnetcore-sdk -y
+#
+## Install .NET Core CLI and net 8 SDK and runtime
+choco install dotnet-8.0-sdk
